@@ -10,24 +10,13 @@ def display_topic(request):
 
 def display_webpages(request):
     LWO=Webpage.objects.all()
-    LWO=Webpage.objects.filter(topic_name='cricket')
-    LWO=Webpage.objects.all()
+    LWO=Webpage.objects.filter(topic_name='Cricket')   
     LWO=Webpage.objects.exclude(topic_name='Cricket')
     LWO=Webpage.objects.all()[2:5:]
     LWO=Webpage.objects.all().order_by('name')
-    LWO=Webpage.objects.all().order_by('-name')
+    LWO=Webpage.objects.filter(topic_name='Cricket').order_by('-name')
     LWO=Webpage.objects.all().order_by(Length('name'))
     LWO=Webpage.objects.all().order_by(Length('name').desc())
-    LWO=Webpage.objects.filter(name__startswith='m')
-    LWO=Webpage.objects.filter(name__endswith='a')
-    LWO=Webpage.objects.filter(name__contains='s')
-    LWO=Webpage.objects.filter(name__in=('rahul','MSD'))
-    LWO=Webpage.objects.filter(name__regex='^M\w{6}')
-    LWO=Webpage.objects.all()
-    LWO=Webpage.objects.filter(Q(topic_name='Cricket') & Q(name__startswith='r'))
-    LWO=Webpage.objects.all()
-    LWO=Webpage.objects.filter(Q(topic_name='Foot Ball') | Q(url__endswith='in'))
-    
 
     
     d={'LWO':LWO}
