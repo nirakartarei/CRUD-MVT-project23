@@ -22,6 +22,8 @@ urlpatterns = [
     path('display_topic/',display_topic,name='display_topic'),
     path('display_webpages/',display_webpages,name='display_webpages'),
     path('AccessRecord_display/',AccessRecord_display,name='AccessRecord_display'),
+    path('update_webpage/',update_webpage,name='update_webpage'),
+     path('delete_webpage/',delete_webpage,name='delete_webpage'),
 ]
     
 
